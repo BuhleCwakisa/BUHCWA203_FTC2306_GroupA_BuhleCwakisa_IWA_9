@@ -44,9 +44,9 @@ const startingAfterTax = salary - taxAmount
 /**
  * Type of the apartment that the user is renting
   **/
-const type = lodging + size
+const type = `${size}-${lodging}`
 /**
  * Remaining amount after all deductions
  * */
-const balance = startingAfterTax - rent['large-apartment'] - parseFloat(expenses.food) - parseFloat(expenses.transport)   
+const balance = startingAfterTax - rent[type] - parseFloat(expenses.food) - parseFloat(expenses.transport)   
 console.log( balance.toFixed(2))
